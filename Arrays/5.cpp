@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+void swapAlternate(int arr[], int size)
+{
+    for (int i = 0; i < size; i += 2)
+    {
+        if (i + 1 <= size)
+        {
+            swap(arr[i], arr[i + 1]);
+        }
+    }
+}
+
+void printingArray(int arr[], int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        cout << arr[i] << " ";
+    }
+}
+
+int main()
+{
+    int arr[6] = {2, 5, 6, 7, 8, 9};
+
+    printingArray(arr, 6);
+    cout << endl;
+    swapAlternate(arr, 6);
+    printingArray(arr, 6);
+}
